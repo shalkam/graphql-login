@@ -22,6 +22,34 @@ cd graphql-login
 ```
 npm run dev
 ```
+- Then you can browse to graphiql at : `http://localhost:3000/graphqiql`
+-registration mutation:
+```
+mutation register {
+  register(username:"test", password:"test") {
+    username
+    password
+    message
+  }
+}
+```
+- login mutation:
+```
+mutation login {
+  login(username: "test", password: "test") {
+    username
+    message
+  }
+}
+```
+- logout mutation:
+```
+mutation logout {
+  logout {
+    result
+  }
+}
+```
 
 # Build
 - run this command
