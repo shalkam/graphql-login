@@ -1,9 +1,3 @@
-.foreverignore
-npm-debug.log
-yarn.lock
 node_modules
-dist/main.js
-dist/main.js.map
-dist/server.js
-dist/server.js.map
-dist/client/dist
+dist
+yarn.lock
