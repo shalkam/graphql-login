@@ -5,6 +5,7 @@ export default {
   type: new GraphQLObjectType({
     name: 'register',
     fields: {
+      id: { type: GraphQLString },
       username: { type: GraphQLString },
       password: { type: GraphQLString },
       message: { type: GraphQLString }
@@ -18,4 +19,4 @@ export default {
     const res = model.register(...arguments);
     return res;
   }
-}
+};
