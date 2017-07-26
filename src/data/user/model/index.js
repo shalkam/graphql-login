@@ -52,8 +52,10 @@ class modelIndex {
     let res = {};
     const _id = shortid.generate();
     const register = new Promise(function(resolve, reject) {
-      model.register(new model({ _id, username: params.username }), params.password, (err, user) =>
-        {
+      model.register(
+        new model({ _id, username: params.username }),
+        params.password,
+        (err, user) => {
           if (err) {
             reject(err);
           }
@@ -61,7 +63,8 @@ class modelIndex {
             reject(new Error('No user returned'));
           }
           resolve(user);
-        });
+        }
+      );
     });
     await register
       .then(user => {
@@ -75,6 +78,13 @@ class modelIndex {
         }
       });
     return res;
+  }
+  remove(root, params, options, ast) {
+    const removed = model.findByIdAndRemove(params.id).exec();
+    if (!removed) {
+      throw new Error('Error removing user');
+    }
+    return removed;
   }
 }
 

@@ -1,6 +1,7 @@
-import login from './login.js';
-import logout from './logout.js';
-import upsert from './upsert.js';
-import register from './register.js';
+import login from './login';
+import logout from './logout';
+import upsert from './upsert';
+import register from './register';
+import remove from './remove';
 
-export default { login, logout, register, userUpsert: upsert }
+export default { login, logout, register, remove, userUpsert: upsert };

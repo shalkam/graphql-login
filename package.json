@@ -2,7 +2,8 @@
   "name": "backend-with-webpack",
   "scripts": {
     "dev": "gulp dev",
-    "build": "NODE_ENV=production gulp build"
+    "build": "NODE_ENV=production gulp build",
+    "test": "jest"
   },
   "main": "dist/server.js",
   "devDependencies": {
@@ -17,7 +18,9 @@
     "express-session": "^1.14.2",
     "graphql": "^0.9.1",
     "graphql-server-express": "^0.6.0",
+    "graphql-tester": "shalkam/graphql-tester",
     "gulp": "^3.9.1",
+    "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",

@@ -31,6 +31,7 @@ class Loader extends events.EventEmitter {
     app.use(
       '/' + config.GQL_URL_DIR,
       graphqlExpress((req, res) => {
+        console.log('user: ', req.sessionID);
         return { schema, context: { req } };
       })
     );
